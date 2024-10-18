@@ -23,8 +23,12 @@ module AlgebraicNotation
 
   module_function
 
+  # Translates a chessboard position from algebraic notation to array indices.
+  #
+  # @param input [String] The position in algebraic notation (e.g., "e2").
+  # @return [Array<Integer>] The translated position as an array of indices.
   def translate(input)
     letter, number = input.chars
-    [COLUMNS[letter], ROWS[number]]
+    [ROWS[number],COLUMNS[letter]]
   end
 end
